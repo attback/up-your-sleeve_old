@@ -1,3 +1,28 @@
+== Grattis Rickard! =================================================================================
+
+Här är din alldeles egna hemsida som du får fylla med vad du vill, alltefter behov!
+Vill du så hjälper jag till med att lägga till det du vill så håller jag 
+det jag lärt mig vid liv :)
+
+Kanske vill du och Robin använda sidan till att dela saker? 
+Kanske blir det ett ställe att dela med dig av vad Knodden pysslar med?
+
+Koden ligger i ett repository på gitgub: https://github.com/attback/up-your-sleeve, bara att klona.
+Sidan är sedan deployad på Heroku och du kommer åt den på up-your-sleeve.herokuapp.com 
+men vid det här laget vet du väl ett nördigare sätt att komma åt den?! 
+Jag kommer bjuda in dig som Collaborator till den appen inom kort så att du också kan 
+pusha upp ändringar. 
+
+Nedan beskrivning kommer från ruby.railstutorial.org som är den jag använt 
+för att lära mig och för att bygga upp sidan. Här finns lite matnyttigt om t.ex. hur Rails delar upp
+koden i alla olika undermappar. 
+
+Happy Coding!
+PUSS
+/Josefin
+====================================================================================================
+
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
