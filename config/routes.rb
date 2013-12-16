@@ -1,4 +1,8 @@
 UpYourSleeve::Application.routes.draw do
+  get "static_pages/Home"
+  get "static_pages/WeWiki"
+  get "static_pages/XKCD"
+  get "static_pages/About"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
