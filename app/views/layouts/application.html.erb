@@ -2,26 +2,44 @@
 
 <!DOCTYPE html>
 <html>
-<head>
-	<title> <%= full_title(yield(:title)) %> </title>
-	
-	<!-- Parentheses are optional -->
-	<!-- If the hash is the last argument in a function call, the curly brackets are optional -->
-	<!-- New syntax: 		media: "all" 
-	Old syntax: 			"media" => "all" 
-	Sometimes the old version has to be used, e.g. in data-turbolinks-... -->
-	<!-- Ruby doesn't care about line breaks or other white spaces. -->
-    
-    <%= stylesheet_link_tag ( "application", { media: "all",
-                                           "data-turbolinks-track" => true } ) %>
-    <%= javascript_include_tag ( "application", { "data-turbolinks-track" => true } ) %>
-    <%= csrf_meta_tags %>
+	<head>
+		<title> <%= full_title(yield(:title)) %> </title>
+		
+		<!-- Parentheses are optional -->
+		<!-- If the hash is the last argument in a function call, the curly brackets are optional -->
+		<!-- New syntax: 		media: "all" 
+		Old syntax: 			"media" => "all" 
+		Sometimes the old version has to be used, e.g. in data-turbolinks-... -->
+		<!-- Ruby doesn't care about line breaks or other white spaces. -->
+		
+		 <%= stylesheet_link_tag "application", media: "all",
+                                           "data-turbolinks-track" => true %>
+    	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    	<%= csrf_meta_tags %>
+    	<!--[if lt IE 9]>
+    	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    	<![endif]-->
+	</head>
+	  
+	<body>
+		<header class="navbar navbar-fixed-top navbar-inverse">
+	    	<div class="navbar-inner">
+	        	<div class="container">
+	          		<%= link_to "up your sleeve", '#', id: "logo" %>
+		          	<nav>
+		            	<ul class="nav pull-right">
+		              	<li><%= link_to "Home",    '#' %></li>
+		              	<li><%= link_to "WeWiki",    '#' %></li>
+		              	<li><%= link_to "XKCD", '#' %></li>
+		            	</ul>
+		          	</nav>
+	        	</div>
+	     	</div>
+	    </header>
+	    
+	    <div class="container">
+	    	<%= yield %>
+	    </div>
 
-</head>
-<body>
-
-<!-- Here, the contents of each page is inserted into the layout. -->
-<%= yield %>
-
-</body>
+	</body>
 </html>
